@@ -1,13 +1,13 @@
 # chinese_lyrics_translation
 This was a quick project with web scraping and regularized expressions to find a random Chinese song, get the lyrics and corresponding Youtube video, provide word-by-word pronunciations and translations (of any words not previously seen), and email the compiled results.
 
-The Jupyter notebook has initial concept development, while the Python files are slightly more sophisticated, wrapping most things into functions. `emails.py` is the main document and `utils.py` provides some helper functions.
+The Jupyter notebook has the initial concept development, while the Python files are slightly more sophisticated, wrapping most things into functions. `emails.py` is the main document and `utils.py` provides some helper functions.
 
-To use, need to update email account credentials in `emails.py` and create and specify locations for files to save lists of already seen words and exceptions under `utils.words_io`.
+To use, email account credentials in `emails.py` will need to be updated, and you will need to create and specify locations for files to save lists of already seen words and exceptions under `utils.words_io`.
 
 This could be combined with a job scheduler such as crontab to automatically send translations for a random song each day for daily language learning.
 
-**Example:** `15 8,20 * * * //anaconda3/bin/python /link/to/emails.py > /tmp/test.log` to run the `emails.py` code every day at 8:15 am and pm.
+**Example:** `15 8,20 * * * (cd /path/to/project/folder/ && venv/bin/python emails.py > /tmp/test.log` to run the `emails.py` code every day at 8:15 am and pm. `venv` virtual environment with the required packages is created using `make setup`.
 
 ## Sample email output
 
