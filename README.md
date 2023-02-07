@@ -3,7 +3,7 @@ This was a quick project with web scraping and regularized expressions to find a
 
 The Jupyter notebook has the initial concept development, while the Python files are slightly more sophisticated, wrapping most things into functions. `emails.py` is the main document and `utils.py` provides some helper functions.
 
-To use, email account credentials in `emails.py` will need to be updated, and you will need to create and specify locations for files to save lists of already seen words and exceptions under `utils.words_io`.
+To use, email account credentials in `emails.py` will need to be updated. See [example site](https://blog.macuyiko.com/post/2016/how-to-send-html-mails-with-oauth2-and-gmail-in-python.html) for how to obtain google client ID, secret, and refresh token. You will also need to create and specify locations for files to save lists of already seen words and exceptions, found in the `utils.words_io` function.
 
 This could be combined with a job scheduler such as crontab to automatically send translations for a random song each day for daily language learning.
 
